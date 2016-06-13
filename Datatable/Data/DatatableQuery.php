@@ -855,7 +855,7 @@ class DatatableQuery
         $outputHeader = array(
             'draw' => (int) $this->requestParams['draw'],
             'recordsTotal' => (int) $this->getCountAllResults($this->rootEntityIdentifier),
-            'recordsFiltered' => (int) count($fresults);
+            'recordsFiltered' => (int) count($fresults),
         );
 
         $json = $this->serializer->serialize(array_merge($outputHeader, $output), 'json');
